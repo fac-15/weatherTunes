@@ -1,0 +1,19 @@
+{
+  "name": "weathertunes",
+  "version": "1.0.0",
+  "description": "Group Project to pick a tune to match the weather",
+  "main": "js/dom.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-15/weatherTunes"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
