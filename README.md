@@ -1,5 +1,7 @@
 # CHMM API Week project - Weather Tunes
 
+- pages adresse : https://fac-15.github.io/weatherTunes/.
+
 ## Proposed APIs:
 
 ### Spotify
