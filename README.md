@@ -34,7 +34,7 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
  - Useful for eliminating user error (i.e. missplelling of location) in text input.
  - [Video Tutorial](https://www.youtube.com/watch?v=y4gZMJKAeWs)
  - [Github](https://github.com/wesbos/JavaScript30/tree/master/06%20-%20Type%20Ahead)
- 
+
 ### Goals
 - Get the weather of any city.
 - Handel cases where the location isn’t recognised.
@@ -44,14 +44,12 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - Song as a response from the music api to the html.
 - Display/ play song.
 
-### Streatch Goals
+### Stretch Goals
 - Ability to play/pause youtube video (music source).
 
-### User Stories 
-- User views app 
-- User types in city 
+### User Stories
+- User views app
+- User types in city
 - User presses enter
-- User is given predicted weather 
-- User can hear a song that is linked to the weather 
-
-
+- User is given predicted weather
+- User can hear a song that is linked to the weather
