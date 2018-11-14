@@ -1,6 +1,6 @@
 # CHMM API Week project - Weather Tunes
 
-- pages adresse : https://fac-15.github.io/weatherTunes/.
+- pages address: https://fac-15.github.io/weatherTunes/.
 
 ## Proposed APIs:
 
@@ -31,6 +31,6 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 
 
 ### Autocomplete with API example (Wes Bos JS 30)
- - Useful for eliminating user error (i.e. missplelling of location) in text input. 
+ - Useful for eliminating user error (i.e. missplelling of location) in text input.
  - [Video Tutorial](https://www.youtube.com/watch?v=y4gZMJKAeWs)
  - [Github](https://github.com/wesbos/JavaScript30/tree/master/06%20-%20Type%20Ahead)
