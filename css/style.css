@@ -31,6 +31,12 @@ a {
     color: #e74e42;
 }
 
+.yellow {
+    color : #f7f7a3;
+}
+.sky {
+    color : lightblue;
+}
 .hidden {
     visibility : hidden;
     height : 0;
@@ -65,33 +71,75 @@ button {
 /* header */
 header {
     position : fixed;
+    height : 20vh;
     left : 0;
     top : 0;
     right : 0;
-    height : 10vh;
-    background-color : lightseagreen;
+    background-color : #3468a8;
     color : white;
+    font-size : 1.25rem;
+    line-height : 1.2;
+    text-align : center;
 }
 header section {
     height : 100%;
     display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+    align-items : flex-start;
+    padding : 1rem;
+}
+header section div {
+    display : flex;
     justify-content : space-between;
     align-items : center;
+    margin-bottom : .5rem;
+}
+header img {
+    margin-right : 1rem;
+}
+
+@media only screen and (min-width: 660px) {
+    header {
+        height : 10vh;
+        text-align : left;
+    }
+    header section {
+        flex-direction : row;
+        align-items : center;
+        padding-top : 1rem;
+        padding-bottom : 1rem;
+    }
+    header section div {
+        margin-bottom : 0;
+    }
+}
+
+
+  
+  
+/* forecast */
+#forecast-section {
+    padding : 0;
 }
 
   
   
 
 
-  
-  
+
 /* - - - - - - - - - - - - - - */
 /* form */
 section[role="main"] {
-    margin-top : 10vh;
+    margin-top : 20vh;
     padding-top : 2rem;
     padding-bottom : 2rem;
     box-sizing : border-box;
+}
+@media only screen and (min-width: 660px) {
+    section[role="main"] {
+        margin-top : 10vh;
+    }
 }
 
 section[role="main"] h2 {

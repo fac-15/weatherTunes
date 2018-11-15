@@ -5,8 +5,7 @@ function renderFunction(results) {
 
   // populate DOM
   document.getElementById("your-city").textContent = results.name;
-  document.getElementById("forecast-value").textContent =
-    results.weather[0].main;
+  document.getElementById("forecast-value").textContent = results.weather[0].main;
 
   return results;
 }
