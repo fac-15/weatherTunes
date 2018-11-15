@@ -5,18 +5,26 @@
 // console.log(keys.openWeather);
 
 
+const weatherFunctions = {
 
-// first call
-(function () {
+
+  // create a copy of the todos array
+  // cloneArrayOfObjects: function(event) {
+  //   return event.target.childNodes[3].value;
+  // }
+  getWeather : function(event) {
+    const location = event.target.childNodes[3].value;
+
     const xhr = new XMLHttpRequest();
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=London${keys.openWeather}`;
-    // var url = 'http://api.openweathermap.org/data/2.5/weather?q=London'+ keys.openWeather;
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}${keys.openWeather}`;
 
     xhr.onreadystatechange = function(){
         if (xhr.status === 200 && xhr.readyState === 4){
             const details = JSON.parse(xhr.responseText);
             console.log(details);
             console.log(details.weather[0].main);
+            return details;
+
             
 
         }
@@ -25,7 +33,38 @@
     xhr.open("GET", url, true);
     xhr.send();
 
-})();
+  }
+
+};
+
+// const newTodo = todoFunctions.todoFunctions();
+
+
+
+
+
+
+// first call
+// weatherRequest:
+// (function () {
+//     const xhr = new XMLHttpRequest();
+//     const url = `http://api.openweathermap.org/data/2.5/weather?q=London${keys.openWeather}`;
+//     // var url = 'http://api.openweathermap.org/data/2.5/weather?q=London'+ keys.openWeather;
+
+//     xhr.onreadystatechange = function(){
+//         if (xhr.status === 200 && xhr.readyState === 4){
+//             const details = JSON.parse(xhr.responseText);
+//             console.log(details);
+//             console.log(details.weather[0].main);
+            
+
+//         }
+//     };
+
+//     xhr.open("GET", url, true);
+//     xhr.send();
+
+// })();
 
 
 
