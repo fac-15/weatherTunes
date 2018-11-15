@@ -33,6 +33,13 @@ const niceIcons = {
 function updateDom(weatherResults) {
 
 
+    // remove error class (if there)
+    const resultContainer = document.getElementById("forecast-section");
+    if (resultContainer.classList.contains('error-not-found')) {
+        resultContainer.classList.remove('error-not-found');
+    }
+    
+    
     const location = weatherResults.name;
     const weather = weatherResults.weather[0].main;
     const temp = weatherResults.main.temp;
@@ -58,7 +65,7 @@ function updateDom(weatherResults) {
         <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
         <i class="icon-large wi ${iconB}"></i>
         `;
-    document.getElementById("forecast-section").innerHTML = html;
+    resultContainer.innerHTML = html;
 }
 
 
