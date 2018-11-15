@@ -18,23 +18,7 @@
             console.log(details);
             console.log(details.weather[0].main);
             
-            
-            
-            
-            
-            // name
-            // document.querySelector('#github-user-handle').textContent = details.name;
-            // // avatar
-            // document.querySelector('#github-user-avatar').src = details.avatar_url;
-            // // public repos
-            // document.querySelector('#github-user-repos').textContent = details.public_repos;
 
-
-            // function countRepos(details){
-            //     console.log(details.public_repos);
-            // }
-            // countRepos(details);
-    
         }
     };
 
