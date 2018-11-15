@@ -1,18 +1,25 @@
 // all DOM manipulation to go here
 
 function renderFunction(results) {
-//   console.log("Weather Info:", results);
+  console.log("Weather Info:", results);
 
   // populate DOM
-  document.getElementById("your-city").textContent = results.name;
-  document.getElementById("forecast-value").textContent = results.weather[0].main;
+//   document.getElementById("your-city").textContent = results.name;
+//   document.getElementById("forecast-value").textContent = results.weather[0].main;
 
-//   const html = `
-//     <h3 class="info-content">Your city: <span id="your-city">${results.name}</span></h3>
-//     <p id="current-temp"></p>
-//     <h3 class="info-content">The forecast for your city is: <span id="forecast-value">${results.weather[0].main}</span></h3>
-//   `;
-//   document.getElementById("forecast-section").innerHTML = html;
+
+  const location = results.name;
+  const weather = results.weather[0].main;
+  const temp = results.main.temp;
+  const icon = results.weather[0].icon;
+  
+  const html = `
+    <h3 class="info-content">Your city: <span id="your-city">${location}</span></h3>
+    <p id="current-temp">Temperature: ${temp} degrees celsius</p>
+    <h3 class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></h3>
+    <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
+  `;
+  document.getElementById("forecast-section").innerHTML = html;
 
 
 //   return results;

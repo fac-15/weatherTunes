@@ -140,7 +140,33 @@ header p {
 
 
 
+/* - - - - - - - - - - - - - - */
+/* results */
+#results {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    margin : 2rem 0;
+}
 
+#results section {
+    margin-top : 1rem;
+    padding : 1rem;
+    border : 1px solid white;
+    border-radius : 1rem;
+}
+@media only screen and (min-width: 660px) {
+    #results {
+        flex-direction : row;
+        align-items : center;
+    }
+    #results section {
+        margin-top : 0;
+    }
+    #results section:nth-child(2) {
+        margin-left : 1rem;
+    }
+}
   
   
 /* forecast */
