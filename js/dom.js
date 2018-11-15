@@ -21,12 +21,6 @@ function updateDom(weatherResults) {
 function renderFunction(results) {
   updateDom(results);
   weatherFunctions.getMusic(results.weather[0].main);
-
-  // populate DOM
-  //   document.getElementById("your-city").textContent = results.name;
-  //   document.getElementById("forecast-value").textContent = results.weather[0].main;
-
-  //   return results;
 }
 
 // weather call - on form submit
