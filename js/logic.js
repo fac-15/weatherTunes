@@ -5,9 +5,7 @@ const weatherFunctions = {
     const location = inputEvent.target.childNodes[3].value;
 
     const xhr = new XMLHttpRequest();
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric${
-      keys.openWeather
-    }`;
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric${keys.openWeather}`;
 
     xhr.onreadystatechange = function() {
       if (xhr.status === 200 && xhr.readyState === 4) {
