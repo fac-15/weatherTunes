@@ -1,6 +1,5 @@
 /* main css */
 
-
 /* some styles */
 
 /* body and text styles */
@@ -9,22 +8,41 @@ body {
     font-size: 16px / 1em;
     font-weight : 400;
     line-height: 1.4;
-    color: black;
+    color: #fcfcfc;
+    background-color: #3588C6;
 }
-  
+
 h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size : 2rem;
     font-weight : 600;
     line-height : 1.6;
+    color: #F7F7A3;
 }
 
-  
+
 h2 {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Signika', Helvetica, Arial, sans-serif;
     font-size : 1.5rem;
     font-weight : 600;
     line-height : 1.5;
 }
 
+.info-content {
+  font-family: 'Quicksand', sans-serif;
+  padding: 20px 10px;
+}
+
+#forecast-section {
+  margin-top: 50px;
+  font-size: 1.3rem;
+}
+
+#your-city, #forecast-value {
+  color: #F7F7A3;
+  font-family: 'Signika', Helvetica, Arial, sans-serif;
+}
 
 a {
     text-decoration: none;
@@ -36,7 +54,7 @@ a {
     height : 0;
 }
 
-  
+
 /* general spacing */
 section,
 .fieldset {
@@ -58,9 +76,9 @@ button {
     cursor: pointer;
     transition: background-color ease-in-out 0.3s;
 }
-  
-  
-  
+
+
+
 /* - - - - - - - - - - - - - - */
 /* header */
 header {
@@ -69,7 +87,7 @@ header {
     top : 0;
     right : 0;
     height : 10vh;
-    background-color : lightseagreen;
+    background-color : #3468A8;
     color : white;
 }
 header section {
@@ -79,12 +97,16 @@ header section {
     align-items : center;
 }
 
-  
-  
+header p {
+  color: #65CEDF;
+}
 
 
-  
-  
+
+
+
+
+
 /* - - - - - - - - - - - - - - */
 /* form */
 section[role="main"] {
@@ -95,7 +117,7 @@ section[role="main"] {
 }
 
 section[role="main"] h2 {
-    color : lightseagreen;
+    color : #fcfcfc;
 }
 
 form {
@@ -103,8 +125,8 @@ form {
     left : 0;
     right : 0;
     bottom : 0;
-    background-color : #f5f5f5;
-    border-top : 2px solid grey;
+    background-color : #3468A8;
+    border-top : 2px solid #3468A8;
     padding: 2rem 1rem;
     box-sizing: border-box;
 }
@@ -112,11 +134,11 @@ form {
 form label {
     font-weight: bold;
     font-size: 1.25rem;
-    color: grey;
+    color: #fcfcfc ;
     padding: 0.5rem 0;
     box-sizing: border-box;
 }
-  
+
 /* text field and submit button */
 form input {
     font-family: 'Signika', Helvetica, Arial, sans-serif;
@@ -148,8 +170,8 @@ form input[type="text"]:active {
 form input[type="text"].error {
     color: #e74e42;
 }
-  
-  
+
+
 /* submit button */
 form input[type="submit"] {
     margin-top : 1.5rem;
@@ -166,17 +188,14 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover,
 form input[type="submit"]:focus {
-    background: seagreen;
+    background: #65CEDF;
 }
-  
-  
-  
-  
+
+
+
+
 
 /* mid to large screen stuff */
 @media only screen and (min-width: 600px) {
 
 }
-    
-  
-    
