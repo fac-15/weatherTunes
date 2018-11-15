@@ -1,27 +1,27 @@
 // all DOM manipulation to go here
 
-function renderFunction(results) {
-  console.log("Weather Info:", results);
-
-  // populate DOM
-  document.getElementById("your-city").textContent = results.name;
+function updateDom(weatherResults){
+  document.getElementById("your-city").textContent = weatherResults.name;
   document.getElementById("forecast-value").textContent =
-    results.weather[0].main;
-
-  return results;
+    weatherResults.weather[0].main;
 }
+
+function renderFunction(results) {
+  updateDom(results);
+  weatherFunctions.getMusic(results.weather[0].main);
+}
+
+// musicRenderFunction(results){
+//   updateMusicDom(results);
+// }
 
 // weather call - on form submit
 function weatherCall(submitEvent) {
   submitEvent.preventDefault();
 
-  // run the function from logic.js
-  const locationWeather = weatherFunctions.getWeather(
-    submitEvent,
-    renderFunction
-  );
+// run the function from logic.js
+  weatherFunctions.getWeather(submitEvent,renderFunction );
   //console.log("is this the answer: " + locationWeather);
-
   form.reset();
 }
 
