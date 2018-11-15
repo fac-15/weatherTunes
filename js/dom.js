@@ -1,32 +1,33 @@
 // all DOM manipulation to go here
 
-function renderFunction(results) {
-  console.log("Weather Info:", results);
+function updateDom(weatherResults) {
+  document.getElementById("your-city").textContent = weatherResults.name;
+  document.getElementById("forecast-value").textContent =
+    weatherResults.weather[0].main;
+  const location = weatherResults.name;
+  const weather = weatherResults.weather[0].main;
+  const temp = weatherResults.main.temp;
+  const icon = weatherResults.weather[0].icon;
 
-  // populate DOM
-//   document.getElementById("your-city").textContent = results.name;
-//   document.getElementById("forecast-value").textContent = results.weather[0].main;
-
-
-  const location = results.name;
-  const weather = results.weather[0].main;
-  const temp = results.main.temp;
-  const icon = results.weather[0].icon;
-  
   const html = `
-    <h3 class="info-content">Your city: <span id="your-city">${location}</span></h3>
-    <p id="current-temp">Temperature: ${temp} degrees celsius</p>
-    <h3 class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></h3>
-    <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
-  `;
+      <h3 class="info-content">Your city: <span id="your-city">${location}</span></h3>
+      <p id="current-temp">Temperature: ${temp} degrees celsius</p>
+      <h3 class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></h3>
+      <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
+    `;
   document.getElementById("forecast-section").innerHTML = html;
-
-
-//   return results;
 }
 
+function renderFunction(results) {
+  updateDom(results);
+  weatherFunctions.getMusic(results.weather[0].main);
 
+  // populate DOM
+  //   document.getElementById("your-city").textContent = results.name;
+  //   document.getElementById("forecast-value").textContent = results.weather[0].main;
 
+  //   return results;
+}
 
 // weather call - on form submit
 // - calls function from logic.js
@@ -34,20 +35,10 @@ function weatherCall(submitEvent) {
   submitEvent.preventDefault();
 
   // run the function from logic.js
-  const locationWeather = weatherFunctions.getWeather(
-    submitEvent,
-    renderFunction
-  );
-
+  weatherFunctions.getWeather(submitEvent, renderFunction);
+  //console.log("is this the answer: " + locationWeather);
   form.reset();
 }
-
-
-
-
-
-
-
 
 // validation on the location input field - with input event
 function validator(e) {
