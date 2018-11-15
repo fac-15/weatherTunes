@@ -5,11 +5,12 @@
   <title>weatherTunes</title>
   <meta name="description" content="weather app">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Signika:400,600" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Signika:400,600" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Montserrat|Signika:400,600" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="icon" type="image/ico" href="img/favicon.ico">
-  <link rel="icon" sizes="120x120" href="img/touch-icon-120.png"> -->
+  <link rel="icon" type="image/ico" href="img/favicon.ico">
+  <link rel="icon" sizes="120x120" href="img/touch-icon-120.png">
 </head>
 
 <body>
@@ -17,7 +18,9 @@
 
     <header>
       <section role="header">
-        <h1>Weather Tunes</h1>
+        <div><img src="./img/weather-icon-white.png" alt="weather tunes logo">
+          <h1><span class="yellow">Weather</span> <span class="sky">Tunes</span></h1>
+        </div>
         <p>Tunes to match the weather in your location</p>
 
 
@@ -26,18 +29,33 @@
 
     <section role="main">
       <h2>Get Your Weather Related Tune</h2>
-      <section id="forecast-section">
-        <h2>Your city: <span id="your-city"></span></h2>
-        <p id="current-temp"></p>
-        <h2>The forecast for your city is: <span id="forecast-value"></span></h2>
-        <iframe width="500" height="400" id="video" src=""></iframe>
+
+
+      <section id="results">
+
+        <section id="forecast-section">
+          <h3 class="info-content">Your city: <span id="your-city"></span></h3>
+          <p id="current-temp"></p>
+          <h3 class="info-content">The forecast for your city is: <span id="forecast-value"></span></h3>
+        </section>
+
+        <section id="music-section">
+          <iframe width="500" height="400" id="video" src=""></iframe>
+        </section>
 
       </section>
+
+
+
+
+
       <form id="get-weather">
-        <label for="your-location">Your Location:</label>
-        <input id="your-location" type="text" name="location" value="" placeholder="enter your location..." pattern="[a-zA-Z\s]+">
-        <p class="hidden"></p>
-        <input type="submit" name="submit" value="Submit">
+        <div class="fieldset">
+          <label for="your-location">Your Location:</label>
+          <input id="your-location" type="text" name="location" value="" placeholder="enter your location..." pattern="[a-zA-Z\s]+">
+          <p class="hidden"></p>
+          <input type="submit" name="submit" value="Submit">
+        </div>
       </form>
     </section>
 
