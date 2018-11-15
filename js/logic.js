@@ -1,51 +1,26 @@
 "use strict";
 
-
-// get api keys
-// console.log(keys.openWeather);
-
-
 const weatherFunctions = {
-
-
-  // create a copy of the todos array
-  // cloneArrayOfObjects: function(event) {
-  //   return event.target.childNodes[3].value;
-  // }
-  getWeather : function(inputEvent) {
+  getWeather: function(inputEvent, renderFunction) {
     const location = inputEvent.target.childNodes[3].value;
 
     const xhr = new XMLHttpRequest();
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric${keys.openWeather}`;
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric${
+      keys.openWeather
+    }`;
 
-    xhr.onreadystatechange = function(){
-        if (xhr.status === 200 && xhr.readyState === 4){
-            const details = JSON.parse(xhr.responseText);
-            console.log(details);
-            let forecast = details.weather[0].main;
-            console.log(forecast);
-
-            // return details;
-
-            document.getElementById('your-city').textContent = details.name;
-            document.getElementById('forecast-value').textContent = forecast;
-
-        }
+    xhr.onreadystatechange = function() {
+      if (xhr.status === 200 && xhr.readyState === 4) {
+        renderFunction(JSON.parse(xhr.responseText));
+      }
     };
 
     xhr.open("GET", url, true);
     xhr.send();
-
   }
-
 };
 
 // const newTodo = todoFunctions.todoFunctions();
-
-
-
-
-
 
 // first call
 // weatherRequest:
@@ -60,7 +35,6 @@ const weatherFunctions = {
 //             console.log(details);
 //             console.log(details.weather[0].main);
 
-
 //         }
 //     };
 
@@ -69,23 +43,17 @@ const weatherFunctions = {
 
 // })();
 
-
-
-
 // all logic stuff to go here
 // function sum(a, b) {
 //   return a + b;
 // }
 var weather = {
-  responseApi: function(code){
+  responseApi: function(code) {
     var code = 200;
     return code;
   }
 };
 
-
-
-
-if (typeof module!== "undefined") {
+if (typeof module !== "undefined") {
   module.exports = weather;
-};
+}
