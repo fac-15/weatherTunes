@@ -55,10 +55,18 @@ a {
 .sky {
     color : lightblue;
 }
+.red {
+    color: #e74e42;
+}
+.icon-large {
+    font-size : 4rem;
+}
 .hidden {
     visibility : hidden;
     height : 0;
 }
+
+
 
 
 /* general spacing */
@@ -155,6 +163,11 @@ header p {
     border : 1px solid white;
     border-radius : 1rem;
 }
+#results section.error-not-found {
+    background : white;
+    color: #e74e42;
+    border-color: #e74e42;
+}
 @media only screen and (min-width: 660px) {
     #results {
         flex-direction : row;
@@ -200,6 +213,14 @@ form {
     border-top : 2px solid #3468A8;
     padding: 2rem 1rem;
     box-sizing: border-box;
+}
+/* make the form take up less space on larger screens */
+@media only screen and (min-width: 1024px) {
+    form {
+        left : 70%;
+        padding : 1rem 0;
+        border-top-left-radius : 1rem;
+    }  
 }
 
 form label {
