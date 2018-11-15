@@ -1,1 +1,182 @@
 /* main css */
+
+
+/* some styles */
+
+/* body and text styles */
+body {
+    font-family: 'Signika', Helvetica, Arial, sans-serif;
+    font-size: 16px / 1em;
+    font-weight : 400;
+    line-height: 1.4;
+    color: black;
+}
+  
+h1 {
+    font-size : 2rem;
+    font-weight : 600;
+    line-height : 1.6;
+}
+
+  
+h2 {
+    font-size : 1.5rem;
+    font-weight : 600;
+    line-height : 1.5;
+}
+
+
+a {
+    text-decoration: none;
+    color: #e74e42;
+}
+
+.hidden {
+    visibility : hidden;
+    height : 0;
+}
+
+  
+/* general spacing */
+section,
+.fieldset {
+    max-width: 1000px;
+    width : 100%;
+    margin : 0 auto;
+    padding : 0 1rem;
+    box-sizing: border-box;
+}
+
+/* general buttons */
+button {
+    margin-left : .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    color: black;
+    border: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color ease-in-out 0.3s;
+}
+  
+  
+  
+/* - - - - - - - - - - - - - - */
+/* header */
+header {
+    position : fixed;
+    left : 0;
+    top : 0;
+    right : 0;
+    height : 10vh;
+    background-color : lightseagreen;
+    color : white;
+}
+header section {
+    height : 100%;
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+}
+
+  
+  
+
+
+  
+  
+/* - - - - - - - - - - - - - - */
+/* form */
+section[role="main"] {
+    margin-top : 10vh;
+    padding-top : 2rem;
+    padding-bottom : 2rem;
+    box-sizing : border-box;
+}
+
+section[role="main"] h2 {
+    color : lightseagreen;
+}
+
+form {
+    position : fixed;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    background-color : #f5f5f5;
+    border-top : 2px solid grey;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: grey;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+}
+  
+/* text field and submit button */
+form input {
+    font-family: 'Signika', Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    width: 100%;
+    display: block;
+    padding: 0.9rem 0.5rem;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    border : 1px solid grey;
+}
+
+
+/* error message */
+.error-msg {
+    background-color: #e74e42;
+    color : white;
+    padding : .5rem;
+    box-sizing : border-box;
+}
+
+
+/* text input */
+form input[type="text"]:focus,
+form input[type="text"]:active {
+    border: 1px solid lightseagreen;
+}
+
+form input[type="text"].error {
+    color: #e74e42;
+}
+  
+  
+/* submit button */
+form input[type="submit"] {
+    margin-top : 1.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+    background-color: lightseagreen;
+    color: white;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color ease-in-out 0.3s;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+    background: seagreen;
+}
+  
+  
+  
+  
+
+/* mid to large screen stuff */
+@media only screen and (min-width: 600px) {
+
+}
+    
+  
+    
