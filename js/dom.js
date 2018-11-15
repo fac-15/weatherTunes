@@ -4,16 +4,18 @@
 
 
 // weather call - on form submit
-function weatherCall(e){
-    e.preventDefault();
+function weatherCall(submitEvent){
+    submitEvent.preventDefault();
 
     // run the function from logic.js
-    const locationWeather = weatherFunctions.getWeather(e);
+    const locationWeather = weatherFunctions.getWeather(submitEvent);
+      console.log('is this the answer: '+ locationWeather)
     // console.log(locationWeather);
 
     form.reset();
 }
-    
+
+
 
 
 
@@ -24,8 +26,8 @@ function validator(e) {
     const errorP = document.querySelector('#get-weather p');
     const errorMsg = 'Please enter a valid location. You can enter letters a-z, upper and lower case';
     // console.log(errorP);
-    
-    
+
+
     // add and remove error classes
 
     // - not valid
@@ -44,7 +46,7 @@ function validator(e) {
         errorP.innerHTML = '';
         console.log('valid a to z');
     }
-   
+
 }
 
 

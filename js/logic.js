@@ -12,20 +12,23 @@ const weatherFunctions = {
   // cloneArrayOfObjects: function(event) {
   //   return event.target.childNodes[3].value;
   // }
-  getWeather : function(event) {
-    const location = event.target.childNodes[3].value;
+  getWeather : function(inputEvent) {
+    const location = inputEvent.target.childNodes[3].value;
 
     const xhr = new XMLHttpRequest();
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}${keys.openWeather}`;
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric${keys.openWeather}`;
 
     xhr.onreadystatechange = function(){
         if (xhr.status === 200 && xhr.readyState === 4){
             const details = JSON.parse(xhr.responseText);
             console.log(details);
-            console.log(details.weather[0].main);
-            return details;
+            let forecast = details.weather[0].main;
+            console.log(forecast);
 
-            
+            // return details;
+
+            document.getElementById('your-city').textContent = details.name;
+            document.getElementById('forecast-value').textContent = forecast;
 
         }
     };
@@ -56,7 +59,7 @@ const weatherFunctions = {
 //             const details = JSON.parse(xhr.responseText);
 //             console.log(details);
 //             console.log(details.weather[0].main);
-            
+
 
 //         }
 //     };
