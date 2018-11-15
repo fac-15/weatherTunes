@@ -1,16 +1,28 @@
 // all DOM manipulation to go here
 
 function renderFunction(results) {
-  console.log("Weather Info:", results);
+//   console.log("Weather Info:", results);
 
   // populate DOM
   document.getElementById("your-city").textContent = results.name;
   document.getElementById("forecast-value").textContent = results.weather[0].main;
 
-  return results;
+//   const html = `
+//     <h3 class="info-content">Your city: <span id="your-city">${results.name}</span></h3>
+//     <p id="current-temp"></p>
+//     <h3 class="info-content">The forecast for your city is: <span id="forecast-value">${results.weather[0].main}</span></h3>
+//   `;
+//   document.getElementById("forecast-section").innerHTML = html;
+
+
+//   return results;
 }
 
+
+
+
 // weather call - on form submit
+// - calls function from logic.js
 function weatherCall(submitEvent) {
   submitEvent.preventDefault();
 
@@ -19,10 +31,16 @@ function weatherCall(submitEvent) {
     submitEvent,
     renderFunction
   );
-  //console.log("is this the answer: " + locationWeather);
 
   form.reset();
 }
+
+
+
+
+
+
+
 
 // validation on the location input field - with input event
 function validator(e) {
