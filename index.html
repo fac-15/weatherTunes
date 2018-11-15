@@ -16,23 +16,21 @@
   <main>
 
     <header>
-      <section role="main">
-        <h1>Weather Tunes:</h1>
-        <p>Get some banging tunes to do with the weather in your location</p>
+      <section role="header">
+        <h1>Weather Tunes</h1>
+        <p>Tunes to match the weather in your location</p>
       </section>
     </header>
 
-    <form id="get-weather">
-      <div class="fieldset">
-        <div>
-          <label for="your-location">Your Location:</label>
-          <input id="your-location" type="text" name="location" value="" placeholder="add to do list item here...">
-        </div>
-        <div>
-          <input type="submit" name="submit" value="Submit">
-        </div>
-      </div>
-    </form>
+    <section role="main">
+      <h2>Get Your Weather Related Tune</h2>
+      <form id="get-weather">
+        <label for="your-location">Your Location:</label>
+        <input id="your-location" type="text" name="location" value="" placeholder="enter your location..." pattern="[a-zA-Z\s]+">
+        <p class="hidden"></p>
+        <input type="submit" name="submit" value="Submit">
+      </form>
+    </section>
 
   </main>
 
