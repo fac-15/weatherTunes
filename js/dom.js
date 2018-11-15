@@ -12,14 +12,25 @@ function renderFunction(results) {
   const weather = results.weather[0].main;
   const temp = results.main.temp;
   const icon = results.weather[0].icon;
-  
+  const lowtemp = results.main.temp_min;
+  const hightemp = results.main.temp_max;
+
   const html = `
-    <h3 class="info-content">Your city: <span id="your-city">${location}</span></h3>
-    <p id="current-temp">Temperature: ${temp} degrees celsius</p>
-    <h3 class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></h3>
+    <h2 class="info-content uppercase">Your city: <span id="your-city">${location}</span></h2>
+    <p class="info-content">Temperature: <span id="current-temp"> ${temp}&#xb0;C</span> degrees celsius</p>
+    <p class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></p>
     <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
   `;
+  const low = `
+  <p class="info-content">Lowest Temp<span id="current-temp">${lowtemp}&#xb0;C</span></p>
+  `;
+  const high = `
+  <p class="info-content">Highest Temp<span id="current-temp">${hightemp}&#xb0;C</span></p>
+  `;
+
   document.getElementById("forecast-section").innerHTML = html;
+  document.getElementById("forecast-low").innerHTML = low;
+  document.getElementById("forecast-high").innerHTML = high;
 
 
 //   return results;
