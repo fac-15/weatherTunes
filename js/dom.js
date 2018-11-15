@@ -2,20 +2,33 @@
 
 function updateDom(weatherResults) {
   document.getElementById("your-city").textContent = weatherResults.name;
-  document.getElementById("forecast-value").textContent =
-    weatherResults.weather[0].main;
+  document.getElementById("forecast-value").textContent = weatherResults.weather[0].main;
   const location = weatherResults.name;
   const weather = weatherResults.weather[0].main;
   const temp = weatherResults.main.temp;
   const icon = weatherResults.weather[0].icon;
+  const lowtemp = weatherResults.main.temp_min;
+  const hightemp = weatherResults.main.temp_max;
 
   const html = `
-      <h3 class="info-content">Your city: <span id="your-city">${location}</span></h3>
-      <p id="current-temp">Temperature: ${temp} degrees celsius</p>
-      <h3 class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></h3>
-      <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
-    `;
+    <h2 class="info-content uppercase">Your city: <span id="your-city">${location}</span></h2>
+    <p class="info-content">Temperature: <span id="current-temp"> ${temp}&#xb0;C</span> degrees celsius</p>
+    <p class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></p>
+    <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
+  `;
+  const low = `
+  <p class="info-content">Lowest Temp<span id="current-temp">${lowtemp}&#xb0;C</span></p>
+  `;
+  const high = `
+  <p class="info-content">Highest Temp<span id="current-temp">${hightemp}&#xb0;C</span></p>
+  `;
+
   document.getElementById("forecast-section").innerHTML = html;
+  document.getElementById("forecast-low").innerHTML = low;
+  document.getElementById("forecast-high").innerHTML = high;
+
+
+//   return results;
 }
 
 function renderFunction(results) {
