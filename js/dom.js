@@ -61,7 +61,7 @@ function updateDom(weatherResults) {
 
     const html = `
         <h2 class="info-content uppercase">Your city: <span id="your-city">${location}</span></h2>
-        <p class="info-content">Temperature: <span id="current-temp"> ${temp}&#xb0;C</span> degrees celsius</p>
+        <p class="info-content">Temperature: <span id="current-temp"> ${temp}&#xb0;C</span></p>
         <p class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></p>
         <i class="icon-large wi ${iconB}"></i>
         `;
