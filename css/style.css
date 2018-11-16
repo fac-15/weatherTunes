@@ -4,22 +4,21 @@
 
 /* body and text styles */
 body {
-    font-family: 'Signika', Helvetica, Arial, sans-serif;
-    font-size: 16px / 1em;
-    font-weight : 400;
-    line-height: 1.4;
-    color: #fcfcfc;
-    background-color: #3588C6;
+  font-family: "Signika", Helvetica, Arial, sans-serif;
+  font-size: 16px / 1em;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #fcfcfc;
+  background-color: #3588c6;
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size : 2rem;
-    font-weight : 600;
-    line-height : 1.6;
-    color: #F7F7A3;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #f7f7a3;
 }
-
 
 h2 {
     font-family: 'Montserrat', sans-serif;
@@ -33,17 +32,18 @@ h2 {
   font-weight: 300;
 }
 
-.forecast-main{
-  background-color: rgba(20,20,204, 0.5);
+.forecast-main {
+  background-color: rgba(20, 20, 204, 0.5);
   margin-top: 50px;
   font-size: 1.3rem;
   text-align: center;
 }
 
-
-#your-city, #forecast-value, #current-temp {
-  color: #F7F7A3;
-  font-family: 'Signika', Helvetica, Arial, sans-serif;
+#your-city,
+#forecast-value,
+#current-temp {
+  color: #f7f7a3;
+  font-family: "Signika", Helvetica, Arial, sans-serif;
 }
 
 .temp-value span {
@@ -52,8 +52,8 @@ h2 {
 }
 
 a {
-    text-decoration: none;
-    color: #e74e42;
+  text-decoration: none;
+  color: #e74e42;
 }
 
 .yellow {
@@ -63,74 +63,77 @@ a {
     color : #E0FFFF;
 }
 .red {
-    color: #e74e42;
+  color: #e74e42;
 }
 .icon-large {
     font-size : 3.5rem;
     padding: 15px;
 }
 .hidden {
-    visibility : hidden;
-    height : 0;
+  visibility: hidden;
+  height: 0;
 }
 
-
-
+iframe {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 400px;
+  height: 250px;
+}
 
 /* general spacing */
 section,
 .fieldset {
-    max-width: 1000px;
-    width : 100%;
-    margin : 0 auto;
-    padding : 0 1rem;
-    box-sizing: border-box;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* general buttons */
 button {
-    margin-left : .5rem;
-    padding: .5rem 1rem;
-    font-size: 1.25rem;
-    color: black;
-    border: 0;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: background-color ease-in-out 0.3s;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  color: black;
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
 }
-
-
 
 /* - - - - - - - - - - - - - - */
 /* header */
 header {
-    position : fixed;
-    height : 20vh;
-    left : 0;
-    top : 0;
-    right : 0;
-    background-color : #3468a8;
-    color : white;
-    font-size : 1.25rem;
-    line-height : 1.2;
-    text-align : center;
+  position: fixed;
+  height: 20vh;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #3468a8;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-align: center;
 }
 header section {
-    height : 100%;
-    display : flex;
-    flex-direction : column;
-    justify-content : space-between;
-    align-items : flex-start;
-    padding : 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
 }
 header section div {
-    display : flex;
-    justify-content : space-between;
-    align-items : center;
-    margin-bottom : .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 header img {
-    margin-right : 1rem;
+  margin-right: 1rem;
 }
 
 header p {
@@ -138,82 +141,74 @@ header p {
 }
 
 @media only screen and (min-width: 660px) {
-    header {
-        height : 10vh;
-        text-align : left;
-    }
-    header section {
-        flex-direction : row;
-        align-items : center;
-        padding-top : 1rem;
-        padding-bottom : 1rem;
-    }
-    header section div {
-        margin-bottom : 0;
-    }
+  header {
+    height: 10vh;
+    text-align: left;
+  }
+  header section {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  header section div {
+    margin-bottom: 0;
+  }
 }
 .uppercase {
   text-transform: uppercase;
 }
 
-
-
 /* - - - - - - - - - - - - - - */
 /* results */
 #results {
-    display : flex;
-    flex-direction : column;
-    align-items : center;
-    /* margin : 2rem 0; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin : 2rem 0; */
 }
 
 #results section {
-    margin-top : 1rem;
-    padding : 1rem;
-    /* border : 1px solid white; */
-    border-radius : 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  /* border : 1px solid white; */
+  border-radius: 1rem;
 }
 #results section.error-not-found {
-    background : white;
-    color: #e74e42;
-    border-color: #e74e42;
+  background: white;
+  color: #e74e42;
+  border-color: #e74e42;
 }
 @media only screen and (min-width: 660px) {
-    #results {
-        flex-direction : row;
-        align-items : center;
-    }
-    #results section {
-        margin-top : 0;
-    }
-    #results section:nth-child(2) {
-        margin : 1rem;
-    }
+  #results {
+    flex-direction: row;
+    align-items: center;
+  }
+  #results section {
+    margin-top: 0;
+  }
+  #results section:nth-child(2) {
+    margin: 1rem;
+  }
 }
-
 
 /* forecast */
 #forecast-section {
-    padding : 0;
+  padding: 0;
 }
 
 /* form */
 section[role="main"] {
-    margin-top : 20vh;
-    padding-top : 2rem;
-    padding-bottom : 2rem;
-    box-sizing : border-box;
-    overflow-y: scroll;
-    height: 110vh;
-}
-@media only screen and (min-width: 660px) {
-    section[role="main"] {
-        margin-top : 10vh;
-    }
+  margin-top: 20vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  height: 110vh;
 }
 
 section[role="main"] h2 {
-    color : #fcfcfc;
+  color: #fcfcfc;
 }
 
 form {
@@ -236,45 +231,42 @@ form {
 }
 
 form label {
-    font-weight: bold;
-    font-size: 1.25rem;
-    color: #fcfcfc ;
-    padding: 0.5rem 0;
-    box-sizing: border-box;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #fcfcfc;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
 }
 
 /* text field and submit button */
 form input {
-    font-family: 'Signika', Helvetica, Arial, sans-serif;
-    font-size: 1.25rem;
-    width: 100%;
-    display: block;
-    padding: 0.9rem 0.5rem;
-    box-sizing: border-box;
-    border-radius: 0.25rem;
-    border : 1px solid grey;
+  font-family: "Signika", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  width: 100%;
+  display: block;
+  padding: 0.9rem 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  border: 1px solid grey;
 }
-
 
 /* error message */
 .error-msg {
-    background-color: #e74e42;
-    color : white;
-    padding : .5rem;
-    box-sizing : border-box;
+  background-color: #e74e42;
+  color: white;
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
-
 
 /* text input */
 form input[type="text"]:focus,
 form input[type="text"]:active {
-    border: 1px solid lightseagreen;
+  border: 1px solid lightseagreen;
 }
 
 form input[type="text"].error {
-    color: #e74e42;
+  color: #e74e42;
 }
-
 
 /* submit button */
 form input[type="submit"] {
@@ -296,11 +288,23 @@ form input[type="submit"]:focus {
     color: #1a3454;
 }
 
-
-
-
-
-/* mid to large screen stuff */
-@media only screen and (min-width: 600px) {
-
+@media only screen and (min-width: 660px) {
+  section[role="main"] {
+    margin-top: 10vh;
+  }
+  iframe {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 500px;
+    height: 300px;
+  }
+}
+/* make the form take up less space on larger screens */
+@media only screen and (min-width: 1024px) {
+  form {
+    left: 70%;
+    padding: 1rem 0;
+    border-top-left-radius: 1rem;
+  }
 }
