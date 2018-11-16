@@ -61,15 +61,15 @@ function updateDom(weatherResults) {
 
     const html = `
         <h2 class="info-content uppercase">Your city: <span id="your-city">${location}</span></h2>
-        <p class="info-content">Temperature: <span id="current-temp"> ${temp}&#xb0;C</span></p>
+        <p class="info-content">Temperature: <span class="current-temp"> ${temp}&#xb0;C</span></p>
         <p class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></p>
         <i class="icon-large wi ${iconB}"></i>
         `;
     const low = `
-        <p class="info-content">Lowest Temp<span id="current-temp">${lowtemp}&#xb0;C</span></p>
+        <p class="info-content">Lowest Temp<span class="current-temp">${lowtemp}&#xb0;C</span></p>
     `;
     const high = `
-        <p class="info-content">Highest Temp<span id="current-temp">${hightemp}&#xb0;C</span></p>
+        <p class="info-content">Highest Temp<span class="current-temp">${hightemp}&#xb0;C</span></p>
     `;
     resultContainer.innerHTML = html;
     document.getElementById("forecast-low").innerHTML = low;
@@ -88,10 +88,10 @@ function errorFunction() {
       <h3 class="info-content">Enter somewhere that exists (according to our app!)</h3>
     `;
     const low = `
-        <p class="info-content">Lowest Temp<span id="current-temp">&#xb0;C</span></p>
+        <p class="info-content">Lowest Temp<span class="current-temp">&#xb0;C</span></p>
     `;
     const high = `
-        <p class="info-content">Highest Temp<span id="current-temp">&#xb0;C</span></p>
+        <p class="info-content">Highest Temp<span class="current-temp">&#xb0;C</span></p>
     `;
     document.getElementById("forecast-section").innerHTML = html;
     document.getElementById("forecast-section").classList.add('error-not-found');
