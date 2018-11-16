@@ -1,4 +1,4 @@
-# CHMM API Week project - Weather Tunes
+# :sunny: CHMM API Week project - Weather Tunes
 
 If you're reviewing our project, please:
 1. clone the repo 
@@ -7,13 +7,17 @@ If you're reviewing our project, please:
 
 - pages address: https://fac-15.github.io/weatherTunes/.
 
-## Proposed APIs:
 
-### Spotify
- - [Getting a track by Spotify ID](https://developer.spotify.com/documentation/web-api/reference/tracks/get-track/)
- - [Searching for a track](https://developer.spotify.com/documentation/web-api/reference/search/search/)
+### Dev Dependencies to install (and other bits to do that are .gitignored):
+- Create tests folder (using jest to test - please don't judge)
+- Create API keys folder (if API keys are required)
+- Install jest with the following:  
+    ```npm install --save-dev jest```
 
-### Examples of API calls on Open Weather Map:
+## APIs:
+
+
+### :zap: Open Weather Map:
 
 ```
 api.openweathermap.org/data/2.5/weather?q=London
@@ -28,19 +32,21 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - [London, UK](api.openweathermap.org/data/2.5/weather?q=London,uk)
 
 
-### Dev Dependencies to install (and other bits to do that are .gitignored):
-- Create tests folder (using jest to test - please don't judge)
-- Create API keys folder (if API keys are required)
-- Install jest with the following:  
-    ```npm install --save-dev jest```
+### :musical_note: Youtube
+- https://developers.google.com/youtube/
+- Although we did manage it eventually we found this api less simple to understand how to use. This was partly because the call we are making to it is more complex but also because we found the documentaiton more obtuse.
+
+## User Stories & Goals
+
+### :books: User Stories
+- User views app
+- User types in city
+- User presses enter
+- User is given predicted weather
+- User can hear a song that is linked to the weather
 
 
-### Autocomplete with API example (Wes Bos JS 30)
- - Useful for eliminating user error (i.e. missplelling of location) in text input.
- - [Video Tutorial](https://www.youtube.com/watch?v=y4gZMJKAeWs)
- - [Github](https://github.com/wesbos/JavaScript30/tree/master/06%20-%20Type%20Ahead)
-
-### Goals
+### :trophy: Goals
 - Get the weather of any city.
 - Handel cases where the location isn’t recognised.
 - Print the weather back to the html.
@@ -49,12 +55,9 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - Song as a response from the music api to the html.
 - Display/ play song.
 
-### Stretch Goals
+### :trophy: :trophy: Stretch Goals
 - Ability to play/pause youtube video (music source).
+- Auto complete of city name. 
 
-### User Stories
-- User views app
-- User types in city
-- User presses enter
-- User is given predicted weather
-- User can hear a song that is linked to the weather
+### :white_check_mark: What we learned
+- You cannot call keys within an object by numbers. 
