@@ -13,6 +13,9 @@ const weatherFunctions = {
       if (xhr.status === 200 && xhr.readyState === 4) {
         renderFunction(JSON.parse(xhr.responseText));
       }
+      else if (xhr.status === 404 && xhr.readyState === 4) {
+        errorFunction();
+      }
     };
 
     xhr.open("GET", url, true);
@@ -20,7 +23,7 @@ const weatherFunctions = {
   },
 
   getMusic: function(weatherResults) {
-    console.log("getMusic", weatherResults);
+    // console.log("getMusic", weatherResults);
 
     const xhr = new XMLHttpRequest();
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${weatherResults +
