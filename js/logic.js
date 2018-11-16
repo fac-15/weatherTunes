@@ -33,9 +33,17 @@ const weatherFunctions = {
     xhr.onreadystatechange = function() {
       if (xhr.status === 200 && xhr.readyState === 4) {
         const music = JSON.parse(xhr.responseText);
-        const videoId = music.items[0]
-          ? music.items[0].id.videoId
-          : "ag8XcMG1EX4";
+        const resultsLength = music.items.length;
+        let videoId;
+        if (resultsLength > 1) {
+          const generateNumber = Math.floor(Math.random() * resultsLength);
+          videoId = music.items[generateNumber].id.videoId;
+        } else if (resultsLength === 1) {
+          videoId = music.items[0].id.videoId;
+        } else if (resultsLength === 0) {
+          videoId = "ag8XcMG1EX4";
+        }
+        console.log(music.items.length);
         document.getElementById(
           "video"
         ).src = `https://www.youtube.com/embed/${videoId}`;
