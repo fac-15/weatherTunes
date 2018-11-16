@@ -22,7 +22,6 @@ const weatherFunctions = {
   },
 
   getMusic: function(weatherResults) {
-    // console.log("getMusic", weatherResults);
 
     const xhr = new XMLHttpRequest();
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${weatherResults +
@@ -43,7 +42,6 @@ const weatherFunctions = {
         } else if (resultsLength === 0) {
           videoId = "ag8XcMG1EX4";
         }
-        console.log(music.items.length);
         document.getElementById(
           "video"
         ).src = `https://www.youtube.com/embed/${videoId}`;
