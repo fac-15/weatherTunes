@@ -83,4 +83,5 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
     - this was discovered when mapping icons supplied from [Open Weather API](https://openweathermap.org/weather-conditions) (a bit :shit:) to [Erik Flowers Weather Icons](https://erikflowers.github.io/weather-icons/)
     - used a string from API call, which began with a number, (e.g. `50d`) to select a key in an object, which would supply the icon class from [Weather Icons](https://erikflowers.github.io/weather-icons/)
     - issue fixed by modifying strings such as `50d` to become `a50`, and `01` to become `a01`, which worked as predicted.
+- once you have your head around the youtube api there's alot of specifying you can do regarding your search parameters. 
 
