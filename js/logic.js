@@ -26,7 +26,7 @@ const weatherFunctions = {
 
     const xhr = new XMLHttpRequest();
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${weatherResults +
-      " song music"}&type=video&videoCaption=closedCaption&videoDefinition=high&videoEmbeddable=true&key=${
+      " song music"}&type=video&videoCaption=closedCaption&videoDefinition=high&videoEmbeddable=true&videoCategoryId=10&maxResults=20&order=relevance&key=${
       keys.youtube
     }`;
 
