@@ -30,6 +30,7 @@ const niceIcons = {
 }
 
 
+
 function updateDom(weatherResults) {
 
     // remove error class (if there)
@@ -77,10 +78,44 @@ function updateDom(weatherResults) {
 
 }
 
-
+// this is for first call - weather
 function renderFunction(results) {
   updateDom(results);
   weatherFunctions.getMusic(results.weather[0].main);
+}
+
+// this is for second call - youtube
+// - basically renders DOM
+function updateIframe(youtubeResults) {
+
+  // get the iframe
+  const iFrame = document.getElementById("video");
+
+  const resultsLength = youtubeResults.items.length;
+  let videoId, videoTitle;
+
+  // random
+  if (resultsLength > 1) {
+    const generateNumber = Math.floor(Math.random() * resultsLength);
+    videoId = youtubeResults.items[generateNumber].id.videoId;
+    videoTitle = youtubeResults.items[generateNumber].snippet.title;
+  }
+  // 1 search result
+  else if (resultsLength === 1) {
+    videoId = youtubeResults.items[0].id.videoId;
+    videoTitle = youtubeResults.items[0].snippet.title;
+  }
+  // no search results
+  else if (resultsLength === 0) {
+    videoId = "ag8XcMG1EX4";
+    videoTitle =  "always take the weather with you";
+  }
+
+  // update the iframe with good shit
+  iFrame.src = `https://www.youtube.com/embed/${videoId}`;
+  iFrame.title = videoTitle;
+
+
 }
 
 function errorFunction() {
