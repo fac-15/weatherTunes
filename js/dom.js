@@ -37,8 +37,8 @@ function updateDom(weatherResults) {
     if (resultContainer.classList.contains('error-not-found')) {
         resultContainer.classList.remove('error-not-found');
     }
-    
-    
+
+
     const location = weatherResults.name;
     const weather = weatherResults.weather[0].main;
     const temp = weatherResults.main.temp;
@@ -50,7 +50,7 @@ function updateDom(weatherResults) {
     // used to get new icon - remove trailing character and prepend with letter 'a' to work
     let iconPop = icon.substring(0, icon.length - 1);
     iconPop = `a${iconPop}`;
-    
+
     let iconB;
     let day = /d$/;
     if(day.test(icon) === true) {
@@ -63,7 +63,6 @@ function updateDom(weatherResults) {
         <h2 class="info-content uppercase">Your city: <span id="your-city">${location}</span></h2>
         <p class="info-content">Temperature: <span id="current-temp"> ${temp}&#xb0;C</span> degrees celsius</p>
         <p class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></p>
-        <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
         <i class="icon-large wi ${iconB}"></i>
         `;
     const low = `
@@ -88,8 +87,16 @@ function errorFunction() {
     const html = `
       <h3 class="info-content">Enter somewhere that exists (according to our app!)</h3>
     `;
+    const low = `
+        <p class="info-content">Lowest Temp<span id="current-temp">&#xb0;C</span></p>
+    `;
+    const high = `
+        <p class="info-content">Highest Temp<span id="current-temp">&#xb0;C</span></p>
+    `;
     document.getElementById("forecast-section").innerHTML = html;
     document.getElementById("forecast-section").classList.add('error-not-found');
+    document.getElementById("forecast-low").innerHTML = low;
+    document.getElementById("forecast-high").innerHTML = high;
 }
 
 

@@ -67,7 +67,8 @@ a {
   color: #e74e42;
 }
 .icon-large {
-  font-size: 4rem;
+    font-size : 3.5rem;
+    padding: 15px;
 }
 .hidden {
   visibility: hidden;
@@ -212,14 +213,22 @@ section[role="main"] h2 {
 }
 
 form {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #3468a8;
-  border-top: 2px solid #3468a8;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
+    position : fixed;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    background-color : #3468A8;
+    border-top : 2px solid #3468A8;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+/* make the form take up less space on larger screens */
+@media only screen and (min-width: 1024px) {
+    form {
+        left : 70%;
+        padding : 1rem 0;
+        border-top-left-radius : 1rem;
+    }
 }
 
 form label {
