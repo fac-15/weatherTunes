@@ -7,10 +7,17 @@ If you're reviewing our project, please:
 
 - pages address: https://fac-15.github.io/weatherTunes/.
 
-## Proposed APIs:
+
+### Dev Dependencies to install (and other bits to do that are .gitignored):
+- Create tests folder (using jest to test - please don't judge)
+- Create API keys folder (if API keys are required)
+- Install jest with the following:  
+    ```npm install --save-dev jest```
+
+## APIs:
 
 
-### Open Weather Map:
+### :zap: Open Weather Map:
 
 ```
 api.openweathermap.org/data/2.5/weather?q=London
@@ -25,19 +32,13 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - [London, UK](api.openweathermap.org/data/2.5/weather?q=London,uk)
 
 
-### Youtube
+### :musical_note: Youtube
 - https://developers.google.com/youtube/
 - Although we did manage it eventually we found this api less simple to understand how to use. This was partly because the call we are making to it is more complex but also because we found the documentaiton more obtuse.
 
+## User Stories & Goals
 
-### Dev Dependencies to install (and other bits to do that are .gitignored):
-- Create tests folder (using jest to test - please don't judge)
-- Create API keys folder (if API keys are required)
-- Install jest with the following:  
-    ```npm install --save-dev jest```
-
-
-### User Stories
+### :books: User Stories
 - User views app
 - User types in city
 - User presses enter
@@ -45,7 +46,7 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - User can hear a song that is linked to the weather
 
 
-### Goals
+### :trophy: Goals
 - Get the weather of any city.
 - Handel cases where the location isn’t recognised.
 - Print the weather back to the html.
@@ -58,5 +59,5 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - Ability to play/pause youtube video (music source).
 - Auto complete of city name. 
 
-### What we learned
+### :white_check_mark: What we learned
 
