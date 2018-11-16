@@ -22,7 +22,6 @@ const weatherFunctions = {
   },
 
   getMusic: function(weatherResults) {
-    // console.log("getMusic", weatherResults);
 
     const xhr = new XMLHttpRequest();
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${weatherResults +
@@ -33,13 +32,16 @@ const weatherFunctions = {
     xhr.onreadystatechange = function() {
       if (xhr.status === 200 && xhr.readyState === 4) {
         const music = JSON.parse(xhr.responseText);
-        const title = music.items[0].snippet.title;
-
-        const videoId = music.items[0]
-          ? music.items[0].id.videoId
-          : "ag8XcMG1EX4";
-
-        renderVideo(JSON.parse(xhr.responseText));  
+        const resultsLength = music.items.length;
+        let videoId;
+        if (resultsLength > 1) {
+          const generateNumber = Math.floor(Math.random() * resultsLength);
+          videoId = music.items[generateNumber].id.videoId;
+        } else if (resultsLength === 1) {
+          videoId = music.items[0].id.videoId;
+        } else if (resultsLength === 0) {
+          videoId = "ag8XcMG1EX4";
+        }
         document.getElementById(
           "video"
         ).src = `https://www.youtube.com/embed/${videoId}`;
