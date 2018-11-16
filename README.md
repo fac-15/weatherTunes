@@ -55,7 +55,7 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - Song as a response from the music api to the html.
 - Display/ play song.
 
-### Stretch Goals
+### :trophy: :trophy: Stretch Goals
 - Ability to play/pause youtube video (music source).
 - Auto complete of city name. 
 
