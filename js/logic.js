@@ -34,7 +34,9 @@ const weatherFunctions = {
     xhr.onreadystatechange = function() {
       if (xhr.status === 200 && xhr.readyState === 4) {
         const music = JSON.parse(xhr.responseText);
-        const videoId = music.items[0].id.videoId;
+        const videoId = music.items[0]
+          ? music.items[0].id.videoId
+          : "ag8XcMG1EX4";
         document.getElementById(
           "video"
         ).src = `https://www.youtube.com/embed/${videoId}`;

@@ -1,5 +1,10 @@
 # CHMM API Week project - Weather Tunes
 
+If you're reviewing our project, please:
+1. clone the repo 
+2. run `npm i`
+3. send us a Gitter message :) @zurda @onwordi @HStewart23 @mr-bagglesworth
+
 - pages address: https://fac-15.github.io/weatherTunes/.
 
 ## Proposed APIs:

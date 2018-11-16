@@ -32,7 +32,6 @@ const niceIcons = {
 
 function updateDom(weatherResults) {
 
-
     // remove error class (if there)
     const resultContainer = document.getElementById("forecast-section");
     if (resultContainer.classList.contains('error-not-found')) {
@@ -43,6 +42,8 @@ function updateDom(weatherResults) {
     const location = weatherResults.name;
     const weather = weatherResults.weather[0].main;
     const temp = weatherResults.main.temp;
+    const lowtemp = weatherResults.main.temp_min;
+    const hightemp = weatherResults.main.temp_max;
 
     // old icon
     const icon = weatherResults.weather[0].icon;
@@ -59,27 +60,28 @@ function updateDom(weatherResults) {
     }
 
     const html = `
-        <h3 class="info-content">Your city: <span id="your-city">${location}</span></h3>
-        <p id="current-temp">Temperature: ${temp} degrees celsius</p>
-        <h3 class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></h3>
+        <h2 class="info-content uppercase">Your city: <span id="your-city">${location}</span></h2>
+        <p class="info-content">Temperature: <span id="current-temp"> ${temp}&#xb0;C</span> degrees celsius</p>
+        <p class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></p>
         <img src="http://openweathermap.org/img/w/${icon}.png"/ alt="${weather}">
         <i class="icon-large wi ${iconB}"></i>
         `;
+    const low = `
+        <p class="info-content">Lowest Temp<span id="current-temp">${lowtemp}&#xb0;C</span></p>
+    `;
+    const high = `
+        <p class="info-content">Highest Temp<span id="current-temp">${hightemp}&#xb0;C</span></p>
+    `;
     resultContainer.innerHTML = html;
+    document.getElementById("forecast-low").innerHTML = low;
+    document.getElementById("forecast-high").innerHTML = high;
+
 }
-
-
 
 
 function renderFunction(results) {
   updateDom(results);
   weatherFunctions.getMusic(results.weather[0].main);
-
-  // populate DOM
-  //   document.getElementById("your-city").textContent = results.name;
-  //   document.getElementById("forecast-value").textContent = results.weather[0].main;
-
-  //   return results;
 }
 
 function errorFunction() {
@@ -89,9 +91,6 @@ function errorFunction() {
     document.getElementById("forecast-section").innerHTML = html;
     document.getElementById("forecast-section").classList.add('error-not-found');
 }
-
-
-
 
 
 // weather call - on form submit
@@ -121,7 +120,6 @@ function validator(e) {
     errorP.classList.add("error-msg");
     errorP.classList.remove("hidden");
     errorP.innerHTML = errorMsg;
-    console.log("not valid");
   }
   // valid
   else {
@@ -129,7 +127,6 @@ function validator(e) {
     errorP.classList.remove("error-msg");
     errorP.classList.add("hidden");
     errorP.innerHTML = "";
-    console.log("valid a to z");
   }
 }
 
