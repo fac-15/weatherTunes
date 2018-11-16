@@ -31,20 +31,12 @@ const weatherFunctions = {
 
     xhr.onreadystatechange = function() {
       if (xhr.status === 200 && xhr.readyState === 4) {
-        const music = JSON.parse(xhr.responseText);
-        const resultsLength = music.items.length;
-        let videoId;
-        if (resultsLength > 1) {
-          const generateNumber = Math.floor(Math.random() * resultsLength);
-          videoId = music.items[generateNumber].id.videoId;
-        } else if (resultsLength === 1) {
-          videoId = music.items[0].id.videoId;
-        } else if (resultsLength === 0) {
-          videoId = "ag8XcMG1EX4";
-        }
-        document.getElementById(
-          "video"
-        ).src = `https://www.youtube.com/embed/${videoId}`;
+        // DOM stuff
+        updateIframe(JSON.parse(xhr.responseText));
+      }
+      else if (xhr.status === 404 && xhr.readyState === 4) {
+        // error function - needs to be video specific
+        errorFunction();
       }
     };
 

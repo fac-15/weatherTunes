@@ -30,6 +30,7 @@ const niceIcons = {
 }
 
 
+
 function updateDom(weatherResults) {
 
     // remove error class (if there)
@@ -61,15 +62,15 @@ function updateDom(weatherResults) {
 
     const html = `
         <h2 class="info-content uppercase">Your city: <span id="your-city">${location}</span></h2>
-        <p class="info-content">Temperature: <span id="current-temp"> ${temp}&#xb0;C</span></p>
+        <p class="info-content">Temperature: <span class="current-temp"> ${temp}&#xb0;C</span></p>
         <p class="info-content">The forecast for your city is: <span id="forecast-value">${weather}</span></p>
         <i class="icon-large wi ${iconB}"></i>
         `;
     const low = `
-        <p class="info-content">Lowest Temp<span id="current-temp">${lowtemp}&#xb0;C</span></p>
+        <p class="info-content">Lowest Temp<span class="current-temp">${lowtemp}&#xb0;C</span></p>
     `;
     const high = `
-        <p class="info-content">Highest Temp<span id="current-temp">${hightemp}&#xb0;C</span></p>
+        <p class="info-content">Highest Temp<span class="current-temp">${hightemp}&#xb0;C</span></p>
     `;
     resultContainer.innerHTML = html;
     document.getElementById("forecast-low").innerHTML = low;
@@ -77,10 +78,44 @@ function updateDom(weatherResults) {
 
 }
 
-
+// this is for first call - weather
 function renderFunction(results) {
   updateDom(results);
   weatherFunctions.getMusic(results.weather[0].main);
+}
+
+// this is for second call - youtube
+// - basically renders DOM
+function updateIframe(youtubeResults) {
+
+  // get the iframe
+  const iFrame = document.getElementById("video");
+
+  const resultsLength = youtubeResults.items.length;
+  let videoId, videoTitle;
+
+  // random
+  if (resultsLength > 1) {
+    const generateNumber = Math.floor(Math.random() * resultsLength);
+    videoId = youtubeResults.items[generateNumber].id.videoId;
+    videoTitle = youtubeResults.items[generateNumber].snippet.title;
+  }
+  // 1 search result
+  else if (resultsLength === 1) {
+    videoId = youtubeResults.items[0].id.videoId;
+    videoTitle = youtubeResults.items[0].snippet.title;
+  }
+  // no search results
+  else if (resultsLength === 0) {
+    videoId = "ag8XcMG1EX4";
+    videoTitle =  "always take the weather with you";
+  }
+
+  // update the iframe with good shit
+  iFrame.src = `https://www.youtube.com/embed/${videoId}`;
+  iFrame.title = videoTitle;
+
+
 }
 
 function errorFunction() {
@@ -88,10 +123,10 @@ function errorFunction() {
       <h3 class="info-content">Enter somewhere that exists (according to our app!)</h3>
     `;
     const low = `
-        <p class="info-content">Lowest Temp<span id="current-temp">&#xb0;C</span></p>
+        <p class="info-content">Lowest Temp<span class="current-temp">&#xb0;C</span></p>
     `;
     const high = `
-        <p class="info-content">Highest Temp<span id="current-temp">&#xb0;C</span></p>
+        <p class="info-content">Highest Temp<span class="current-temp">&#xb0;C</span></p>
     `;
     document.getElementById("forecast-section").innerHTML = html;
     document.getElementById("forecast-section").classList.add('error-not-found');
