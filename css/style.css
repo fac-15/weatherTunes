@@ -23,15 +23,14 @@ h1 {
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Signika', Helvetica, Arial, sans-serif; */
     font-size : 1.5rem;
     font-weight : 600;
     line-height : 1.5;
 }
 
 .info-content {
-  font-family: 'Quicksand', sans-serif;
-  /* padding: 20px 10px; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 .forecast-main{
@@ -58,10 +57,10 @@ a {
 }
 
 .yellow {
-    color : #f7f7a3;
+    color : #F7F785;
 }
 .sky {
-    color : lightblue;
+    color : #E0FFFF;
 }
 .red {
     color: #e74e42;
@@ -135,7 +134,7 @@ header img {
 }
 
 header p {
-  color: #65CEDF;
+  color: #E0FFFF;
 }
 
 @media only screen and (min-width: 660px) {
@@ -283,8 +282,8 @@ form input[type="submit"] {
     padding: 1rem;
     box-sizing: border-box;
     font-size: 1.25rem;
-    background-color: lightseagreen;
-    color: white;
+    background-color: #1a3454;
+    color: #E0FFFF;
     border: 0;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -293,7 +292,7 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover,
 form input[type="submit"]:focus {
-    background: #65CEDF;
+    background: #E0FFFF;
     color: #1a3454;
 }
 
