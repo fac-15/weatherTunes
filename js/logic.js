@@ -12,8 +12,7 @@ const weatherFunctions = {
     xhr.onreadystatechange = function() {
       if (xhr.status === 200 && xhr.readyState === 4) {
         renderFunction(JSON.parse(xhr.responseText));
-      }
-      else if (xhr.status === 404 && xhr.readyState === 4) {
+      } else if (xhr.status === 404 && xhr.readyState === 4) {
         errorFunction();
       }
     };
@@ -27,7 +26,7 @@ const weatherFunctions = {
 
     const xhr = new XMLHttpRequest();
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${weatherResults +
-      " song lyrics music"}&type=video&videoCaption=closedCaption&videoDefinition=high&videoEmbeddable=true&key=${
+      " song music"}&type=video&videoCaption=closedCaption&videoDefinition=high&videoEmbeddable=true&key=${
       keys.youtube
     }`;
 
@@ -47,13 +46,6 @@ const weatherFunctions = {
     xhr.send();
   }
 };
-
-// var weather = {
-//   responseApi: function(code) {
-//     var code = 200;
-//     return code;
-//   }
-// };
 
 if (typeof module !== "undefined") {
   module.exports = weather;

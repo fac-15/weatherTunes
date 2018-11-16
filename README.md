@@ -1,4 +1,4 @@
-# CHMM API Week project - Weather Tunes
+# :sunny: CHMM API Week project - Weather Tunes
 
 
 **:mag: If you're reviewing our project, please:**
@@ -15,15 +15,11 @@
     ```npm install --save-dev jest```
 
 
+## APIs:
 
-## :ring: Proposed APIs:
 
-### Spotify
- - [Getting a track by Spotify ID](https://developer.spotify.com/documentation/web-api/reference/tracks/get-track/)
- - [Searching for a track](https://developer.spotify.com/documentation/web-api/reference/search/search/)
- - **found out this required oAuth authentication with curl or whatever, seemed like a faff, so went with YoutTube**
+### :zap: Open Weather Map:
 
-### Open Weather Map:
 
 ```
 api.openweathermap.org/data/2.5/weather?q=London
@@ -36,14 +32,28 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 [London, UK](api.openweathermap.org/data/2.5/weather?q=London,uk)
 
 
-### User Stories
+### :musical_note: Youtube
+- https://developers.google.com/youtube/
+- Although we did manage it eventually we found this api less simple to understand how to use. This was partly because the call we are making to it is more complex but also because we found the documentaiton more obtuse.
+
+## :ring: Proposed APIs:
+
+### Spotify
+ - [Getting a track by Spotify ID](https://developer.spotify.com/documentation/web-api/reference/tracks/get-track/)
+ - [Searching for a track](https://developer.spotify.com/documentation/web-api/reference/search/search/)
+ - **found out this required oAuth authentication with curl or whatever, seemed like a faff, so went with YoutTube**
+
+## User Stories & Goals
+
+### :books: User Stories
+
 - User views app
 - User types in city
 - User presses enter
 - User is given predicted weather
 - User can hear a song that is linked to the weather
 
-### :goal: Goals
+### :trophy::goal: Goals
 - Get the weather of any city.
 - Handle cases where the location isn’t recognised.
 - Print the weather back to the html.
@@ -72,3 +82,4 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
     - this was discovered when mapping icons supplied from [Open Weather API](https://openweathermap.org/weather-conditions) (a bit :shit:) to [Erik Flowers Weather Icons](https://erikflowers.github.io/weather-icons/)
     - used a string from API call, which began with a number, (e.g. `50d`) to select a key in an object, which would supply the icon class from [Weather Icons](https://erikflowers.github.io/weather-icons/)
     - issue fixed by modifying strings such as `50d` to become `a50`, and `01` to become `a01`, which worked as predicted.
+
