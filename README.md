@@ -36,9 +36,9 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - https://developers.google.com/youtube/
 - Although we did manage it eventually we found this api less simple to understand how to use. This was partly because the call we are making to it is more complex but also because we found the documentaiton more obtuse.
 
-## :ring: Proposed APIs:
+## Proposed APIs:
 
-### Spotify
+###  :ring: Spotify
  - **found out this required oAuth authentication with curl or whatever, seemed like a faff, so went with YoutTube**
  - [Getting a track by Spotify ID](https://developer.spotify.com/documentation/web-api/reference/tracks/get-track/)
  - [Searching for a track](https://developer.spotify.com/documentation/web-api/reference/search/search/)
