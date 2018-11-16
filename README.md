@@ -39,9 +39,10 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 ## :ring: Proposed APIs:
 
 ### Spotify
+ - **found out this required oAuth authentication with curl or whatever, seemed like a faff, so went with YoutTube**
  - [Getting a track by Spotify ID](https://developer.spotify.com/documentation/web-api/reference/tracks/get-track/)
  - [Searching for a track](https://developer.spotify.com/documentation/web-api/reference/search/search/)
- - **found out this required oAuth authentication with curl or whatever, seemed like a faff, so went with YoutTube**
+
 
 ## User Stories & Goals
 
@@ -53,7 +54,7 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
 - User is given predicted weather
 - User can hear a song that is linked to the weather
 
-### :trophy::goal: Goals
+### :trophy: Goals
 - Get the weather of any city.
 - Handle cases where the location isn’t recognised.
 - Print the weather back to the html.
@@ -71,7 +72,7 @@ api.openweathermap.org/data/2.5/weather?q=London,uk
     - [Github](https://github.com/wesbos/JavaScript30/tree/master/06%20-%20Type%20Ahead)
 
 
-### Things learned / compromises etc
+### :pencil2: Things learned / compromises etc
 - We need better handling of errors, e.g.
     - same named cities (e.g. London U.K. and London, Canada)
     - misspelling of cities could be handled by an autocomplete (see above)
